@@ -9,7 +9,7 @@ pi ${1:-51} >&9
 
 i=0
 
-echo 'PI:'
+echo 'PI (q-quit):'
 while read -n1 -u9 p
 do
   if [[ "x${p}" == "x" ]]
