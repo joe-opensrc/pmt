@@ -7,6 +7,8 @@ mkfifo /tmp/pi
 exec 9<>/tmp/pi
 pi ${1:-51} >&9
 
+# state; but if you're capable of memorizing pi upto MAX_INTEGER
+# this is the least of your worries
 i=0
 
 echo 'PI (q-quit):'
