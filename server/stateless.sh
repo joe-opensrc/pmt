@@ -21,6 +21,14 @@ do
 
   while read -n1 -u0 -s d
   do
+
+    if [[ "${d}" == $'\f' ]]
+    then
+      clear
+      pi ${i} | head -c -2
+      continue
+    fi
+
     if [[ "${d}" == "${p}" ]]
     then
       echo -n "${p}"
