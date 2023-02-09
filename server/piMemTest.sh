@@ -3,6 +3,13 @@
 trap '{ rm -f /tmp/pi; exit 0;}' HUP INT TERM KILL EXIT
 
 mkfifo /tmp/pi 
+function assertInteger(){
+  if ! [[ ${1} =~ ^[0-9]+$ ]]
+  then
+   echo "type(${np}) != Integer" >&2
+   exit 9
+  fi
+}
 
 exec 9<>/tmp/pi
 pi ${1:-51} >&9
