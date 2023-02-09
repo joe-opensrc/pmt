@@ -6,7 +6,7 @@ mkfifo /tmp/pi
 function assertInteger(){
   if ! [[ ${1} =~ ^[0-9]+$ ]]
   then
-   echo "type(${np}) != Integer" >&2
+   echo "type(${1}) != Integer" >&2
    exit 9
   fi
 }
