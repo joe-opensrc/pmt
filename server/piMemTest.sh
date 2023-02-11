@@ -75,6 +75,8 @@ do
     if [[ "${d}" == "${p}" ]]
     then
       echo -n "${p}"
+      (( i++ ))
+      (( e++ ))
       break
     else
 
@@ -95,9 +97,11 @@ do
       echo -e "${d} -> ${p}"
       pi ${i} | head -c -2 # utf8-yerself 
 
+      (( e++ ))
+
     fi
   done
 
-  (( i++ ))
 done 
+
 
