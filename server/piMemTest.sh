@@ -84,6 +84,14 @@ do
         exit 0
       fi
 
+
+      if [[ "${d}" == "i" ]]
+      then
+        clear
+        echo "pos: ${i}|attempts: ${e}"
+        continue
+      fi
+
       echo -e "${d} -> ${p}"
       pi ${i} | head -c -2 # utf8-yerself 
 
