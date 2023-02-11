@@ -65,8 +65,7 @@ do
 
   while read -n1 -u0 -s d
   do
-
-    if [[ "${d}" == $'\f' ]]
+    if [[ "${d}" == '' ]]
     then
       clear
       pi ${i} | head -c -2
