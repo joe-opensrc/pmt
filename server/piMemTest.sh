@@ -78,7 +78,7 @@ do
       break
     else
 
-      if [[ "${d}" == "q" ]]
+      if [[ "${d}" == "q" || "${d}" == '' ]]
       then
         echo -e "\nBye."
         exit 0
