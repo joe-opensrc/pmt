@@ -10,12 +10,6 @@ function assertInteger(){
   fi
 }
 
-# for arg in "${@}"
-# do
-#   assertInteger ${1}
-#   shift
-# done
-
 # num places
 np=6 #1
 # start place
