@@ -34,7 +34,7 @@ e=0
 echo "${@}" | grep -E '(\-h|\-\-help)' &>/dev/null
 if [[ $? -eq 0 ]]
 then
-  echo -en "${usg}"
+  echo -en "${usg}\n\n"
   exit 0
 fi
 
