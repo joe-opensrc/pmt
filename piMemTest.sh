@@ -10,6 +10,16 @@ function assertInteger(){
   fi
 }
 
+helpMenu="
+  q or Ctrl+d := quit
+  i           := info
+  h           := this help menu
+  Ctrl+l      := clear"
+
+usg="
+$(basename ${0}) [<no. of decimals>] [<start/offset>]
+${helpMenu}"
+
 # num places
 np=6 #1
 # start place
@@ -20,6 +30,13 @@ sp=1
 i=0
 e=0
 
+# basic help standard
+echo "${@}" | grep -E '(\-h|\-\-help)' &>/dev/null
+if [[ $? -eq 0 ]]
+then
+  echo -en "${usg}"
+  exit 0
+fi
 
 if [[ ${#} -gt 0 ]]
 then
@@ -85,6 +102,13 @@ do
       then
         clear
         echo "pos: ${i}|attempts: ${e}"
+        continue
+      fi
+
+      if [[ "${d}" == "h" ]]
+      then
+        clear
+        echo -ne "${helpMenu}" 
         continue
       fi
 
