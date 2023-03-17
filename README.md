@@ -22,3 +22,7 @@ It uses a program called `pi` to generate the digits / string;
 ```bash
 apt-get install pi
 ```
+
+### Example:
+
+![readme_arg1](readme_arg1.gif)
